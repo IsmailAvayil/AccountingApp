@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid blue;;
+  border-bottom: 2px solid #d3eef5;
   background-color: white;
   padding: 20px;
   border-top-right-radius:5px;
@@ -13,10 +13,35 @@
 
 }
 .Header-Buttons{
-  width: 400px;
+  width: 450px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.Header-Buttons button i{
+  margin-right: 8px;
+}
+
+.Header-Down{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  height: 90px;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.Header-down-sorts{
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  justify-content: space-around;
+}
+.Header-down-Buttons{
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -38,4 +63,19 @@
   margin-left: 10px;
   background-color: #0d6efd;
   color:white;
+}
+
+select{
+  border-radius: 10px;
+  width:120px
+}
+.sorting h5{
+  padding: 0px;
+  margin: 0px
+}
+.Link-style{
+  color:white;
+}
+button i{
+  margin-right: 10px;
 }

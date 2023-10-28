@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-function Header({count}) {
-  const hadleButtons=()=>{
-    alert("Sorry,Access Denied!")
-  }
+function Header({ count }) {
+  const handleButtons = () => {
+    alert("Sorry,Access Denied!");
+  };
   return (
     <div>
       <div className="App-Header">
@@ -18,46 +18,60 @@ function Header({count}) {
         </div>
 
         <div className="Header-Buttons">
-          <button className="ui primary small button" onClick={hadleButtons}>Print</button>
-          <button className="ui primary small button" onClick={hadleButtons}>Export</button>
-          <button className="ui primary small button" onClick={hadleButtons}>Send</button>
-          <button className="ui primary small button" onClick={hadleButtons}>Create</button>
+          <button className="ui primary small button" onClick={handleButtons}>
+            <i className="fa-solid fa-print"></i>Print
+          </button>
+          <button className="ui primary small button" onClick={handleButtons}>
+            <i className="fa-solid fa-download"></i>Export
+          </button>
+          <button className="ui primary small button" onClick={handleButtons}>
+            <i className="fa-solid fa-paper-plane"></i>Send
+          </button>
+          <button className="ui primary small button" onClick={handleButtons}>
+            <i className="fa-solid fa-plus"></i>Create
+          </button>
         </div>
       </div>
-      <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",height:"150px",alignItems:"center",margin:"10px",padding:"10px"}}>
-        <div style={{display:"flex",flexDirection:"row",width:"300px",justifyContent:"space-around"}}>
-          <div>
-            <h5 style={{ padding: "0px", margin: "0px" }}>Search By</h5>
+      <div className="Header-Down">
+        <div className="Header-down-sorts">
+          <div className="sorting">
+            <h5>Search By</h5>
             <select className="ui dropdown">
               <option value="">All</option>
               <option value="1">#</option>
               <option value="0">#</option>
             </select>
           </div>
-          <div>
-            <h5 style={{ padding: "0px", margin: "0px" }}>Sort By</h5>
+          <div className="sorting">
+            <h5>Sort By</h5>
             <select className="ui dropdown">
               <option value="">All</option>
               <option value="1">#</option>
               <option value="0">#</option>
             </select>
           </div>
-          <div>
-            <h5 style={{ padding: "0px", margin: "0px" }}>Sort Order</h5>
-            <select className="ui dropdown">
+          <div className="sorting">
+            <h5>Sort Order</h5>
+            <select className="ui  dropdown">
               <option value="">Ascending</option>
               <option value="1">#</option>
               <option value="0">#</option>
             </select>
           </div>
         </div>
-        <div>
-          <button   className="ui primary small button" > 
-          <Link to="/ShowItems" style={{color:"white"}}>
-            Show
-          </Link></button>
-          <button className="ui primary small button" onClick={hadleButtons}>Clear</button>
-
+        <div className="Header-down-Buttons">
+          <Link to="/ShowItems" className="Link-style">
+            <button className="ui primary small button">
+              <i className="fa-solid fa-filter"></i>
+                Show
+            </button>
+          </Link>
+          <button
+            className="ui inverted primary small button"
+            onClick={handleButtons}
+          >
+            Clear
+          </button>
         </div>
       </div>
     </div>
